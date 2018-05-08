@@ -12,4 +12,9 @@
  *
  *= require_tree .
  *= require_self
+ *= require bootstrap.min
  */
+
+.img-fluid {
+	max-width: 100%;
+}
