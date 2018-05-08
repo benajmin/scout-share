@@ -1,0 +1,22 @@
+<table>
+  <tr> 
+    <th>Title</th>
+    <th>Description</th>
+    <th>Cost</th>
+    <th>Email</th>
+    <th>Start</th>
+    <th>End</th>
+  </tr>
+  <% @events.each do |event| %>
+    <tr>
+      <td><%= event.title %></td>
+      <td><%= event.description %></td>
+      <td><%= event.cost %></td>
+      <td><%= event.email %></td>
+      <td><%= event.start %></td>
+      <td><%= event.end %></td>
+      <td><%= link_to 'Show', event_path(event) %></td>
+    </tr>
+  <% end %>
+</table>
+<a href = "<%= new_event_path%>"> Add new Event </a>

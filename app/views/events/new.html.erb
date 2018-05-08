@@ -1,0 +1,22 @@
+<%= form_with scope: :event, url: events_path, local: true do |form| %>
+  <p>
+    <%= form.label :title %></br>
+    <%= form.text_field :title %></br>
+
+    <%= form.label :cost %></br>
+    <%= form.number_field :cost %></br>
+
+    <%= form.label :description%></br>
+    <%= form.text_area :description %></br>
+
+    <%= form.label :email %></br>
+    <%= form.email_field :email %></br>
+
+    <%= form.label :start %></br>
+    <%= form.datetime_local_field :start %></br>
+
+    <%= form.label :end %></br>
+    <%= form.datetime_field :end %>
+  </p>
+  <p><%= form.submit %></p>
+<% end %>
