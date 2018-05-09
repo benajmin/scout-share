@@ -9,6 +9,39 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="header">
+      <%= image_tag "tents-header.jpg", class:"img-responsive" %>
+      <nav class="navbar navbar-inverse" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse" id="navbar">
+            <ul class="nav navbar-nav">
+              <li>
+                <a href="#">
+                  <%= image_tag "logo/White.png" %>
+                  ScoutShare
+                </a>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Login</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container-fluid" id = "body">
+      <div class= "content well">
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>
