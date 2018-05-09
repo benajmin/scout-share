@@ -19,7 +19,8 @@
     <%= form.datetime_field :end %></br>
 
     <%= form.label :group_id %></br>
-    <%= form.number_field :group_id %>
+    <% options = options_from_collection_for_select(@groups, 'id', 'name') %>
+    <%= form.select :group_id,  options %>
   </p>
   <p><%= form.submit %></p>
 <% end %>

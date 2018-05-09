@@ -8,6 +8,7 @@
     <th>Email</th>
     <th>Start</th>
     <th>End</th>
+    <th>Group ID</th>
   </tr>
   <% @events.each do |event| %>
     <tr>
@@ -17,6 +18,11 @@
       <td><%= event.email %></td>
       <td><%= event.start %></td>
       <td><%= event.end %></td>
+      <% if event.group_id %>
+        <td><%= Group.find(event.group_id).name %></td>
+      <% else %>
+        <td></td>
+      <% end %>
       <td><%= link_to 'Show', event_path(event) %></td>
     </tr>
   <% end %>

@@ -4,12 +4,13 @@ class EventsController < ApplicationController
   end
 
   def new
+    @groups = Group.all
   end
 
   def create
     @event = Event.new(event_params)
 
-    @event.save
+    @event.save!
     redirect_to @event
   end
 
