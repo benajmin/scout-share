@@ -28,6 +28,10 @@
 	left: 0;
 }
 
+.navbar-inverse .navbar-nav > .open > a:focus {
+	background-color: rgba(98, 37, 153, 0.8);
+}
+
 .nav > li > a > img {
 	height: 50px;
 }
