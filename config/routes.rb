@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   get 'groups/new'
+  get 'static_pages/about'
+  get 'static_pages/faq'
+  get 'static_pages/contact'
 
   resources :groups
   resources :events
