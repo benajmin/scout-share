@@ -15,7 +15,7 @@
       <td><%= event.title %></td>
       <td><%= event.description %></td>
       <td><%= number_to_currency(event.cost) %></td>
-      <td><%= event.email %></td>
+      <td><%= mail_to event.email %></td>
       <td><%= event.start %></td>
       <td><%= event.end %></td>
       <% if event.group_id %>
