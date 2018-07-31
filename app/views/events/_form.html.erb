@@ -12,10 +12,10 @@
   <%= form.email_field :email %></br>
 
   <%= form.label :start %></br>
-  <%= form.datetime_local_field :start %></br>
+  <%= form.datetime_select :start %></br>
 
   <%= form.label :end %></br>
-  <%= form.datetime_field :end %></br>
+  <%= form.datetime_select :end %></br>
 
   <%= form.label :group_name %></br>
   <%= form.text_field :group_name, id: :event_group_name, data:{autocomplete_source: Group.order('LOWER(name)').map(&:name)} %>
